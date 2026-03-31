@@ -1,0 +1,42 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    /* Disable text selection */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#viewer-container {
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    background-color: white;
+}
+
+canvas {
+    display: block;
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+#watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-size: 48px;
+    color: rgba(0, 0, 0, 0.1);
+    pointer-events: none; /* Make the watermark non-interactive */
+    z-index: 10;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: bold;
+}
